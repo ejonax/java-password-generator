@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 public class PasswordGenerator {
     public static void main(String[] args) throws Exception {
-
-        Scanner input = new Scanner( System.in);
-
+       
+        try (Scanner input =new Scanner(System.in)){
+        
         System.out.println("Inserisci il tuo nome!");
         String nomeUtente = input.next();
         System.out.println("Il nome inserito è " + nomeUtente);
@@ -34,5 +34,7 @@ public class PasswordGenerator {
         System.out.println("La somma del tuo compleanno è " + sum);
 
         System.out.println("Il tuo password è " + nomeUtente + "-" + cognomeUtente + "-" + colUtente + "-" + sum);
+    
+        }
     }
 }
